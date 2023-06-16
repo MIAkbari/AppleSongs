@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+   SearchRepo.plist
+   AppleSongs
+
+   Created by Mohammad on 6/13/23.
+   Copyright (c) 2023 ___ORGANIZATIONNAME___. All rights reserved.
+-->
 <plist version="1.0">
-<dict>
-	<key>Configuration</key>
-	<string>${CONFIGURATION}</string>
-</dict>
+<dict/>
 </plist>

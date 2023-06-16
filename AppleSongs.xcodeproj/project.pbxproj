@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		115A81072A3896DE00BDF5E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115A81062A3896DE00BDF5E2 /* AppDelegate.swift */; };
-		115A81092A3896DE00BDF5E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115A81082A3896DE00BDF5E2 /* SceneDelegate.swift */; };
-		115A810B2A3896DE00BDF5E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115A810A2A3896DE00BDF5E2 /* ViewController.swift */; };
-		115A810E2A3896DE00BDF5E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 115A810C2A3896DE00BDF5E2 /* Main.storyboard */; };
+		115A810B2A3896DE00BDF5E2 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115A810A2A3896DE00BDF5E2 /* SearchView.swift */; };
 		115A81102A3896DF00BDF5E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 115A810F2A3896DF00BDF5E2 /* Assets.xcassets */; };
 		115A81132A3896DF00BDF5E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 115A81112A3896DF00BDF5E2 /* LaunchScreen.storyboard */; };
 		115A811E2A3896DF00BDF5E2 /* AppleSongsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115A811D2A3896DF00BDF5E2 /* AppleSongsTests.swift */; };
@@ -26,6 +24,13 @@
 		115A81592A389CF000BDF5E2 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115A81582A389CF000BDF5E2 /* BaseModel.swift */; };
 		115A815B2A389D9200BDF5E2 /* SongSearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115A815A2A389D9200BDF5E2 /* SongSearchModel.swift */; };
 		115A815E2A38A19600BDF5E2 /* String+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115A815D2A38A19600BDF5E2 /* String+Extentions.swift */; };
+		115A81612A38ABED00BDF5E2 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115A81602A38ABED00BDF5E2 /* Endpoint.swift */; };
+		115A81632A38AE6200BDF5E2 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115A81622A38AE6200BDF5E2 /* API.swift */; };
+		115A81652A38AF2500BDF5E2 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115A81642A38AF2500BDF5E2 /* Network.swift */; };
+		115A81682A38AF5F00BDF5E2 /* Data+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115A81672A38AF5F00BDF5E2 /* Data+Extentions.swift */; };
+		115A816A2A38AFAB00BDF5E2 /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115A81692A38AFAB00BDF5E2 /* ServiceProtocol.swift */; };
+		115A816D2A38B86800BDF5E2 /* Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 115A816C2A38B86800BDF5E2 /* Configuration.plist */; };
+		115A81712A3C551F00BDF5E2 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115A81702A3C551F00BDF5E2 /* SearchViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,9 +53,7 @@
 /* Begin PBXFileReference section */
 		115A81032A3896DE00BDF5E2 /* AppleSongs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleSongs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		115A81062A3896DE00BDF5E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		115A81082A3896DE00BDF5E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		115A810A2A3896DE00BDF5E2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		115A810D2A3896DE00BDF5E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		115A810A2A3896DE00BDF5E2 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		115A810F2A3896DF00BDF5E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		115A81122A3896DF00BDF5E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		115A81142A3896DF00BDF5E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -69,6 +72,13 @@
 		115A81582A389CF000BDF5E2 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		115A815A2A389D9200BDF5E2 /* SongSearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongSearchModel.swift; sourceTree = "<group>"; };
 		115A815D2A38A19600BDF5E2 /* String+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extentions.swift"; sourceTree = "<group>"; };
+		115A81602A38ABED00BDF5E2 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		115A81622A38AE6200BDF5E2 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		115A81642A38AF2500BDF5E2 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		115A81672A38AF5F00BDF5E2 /* Data+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extentions.swift"; sourceTree = "<group>"; };
+		115A81692A38AFAB00BDF5E2 /* ServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
+		115A816C2A38B86800BDF5E2 /* Configuration.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Configuration.plist; sourceTree = "<group>"; };
+		115A81702A3C551F00BDF5E2 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,11 +137,6 @@
 				115A813A2A38977500BDF5E2 /* Data */,
 				115A813B2A3897CF00BDF5E2 /* Domin */,
 				115A813C2A3897D600BDF5E2 /* Application */,
-				115A81082A3896DE00BDF5E2 /* SceneDelegate.swift */,
-				115A810A2A3896DE00BDF5E2 /* ViewController.swift */,
-				115A810C2A3896DE00BDF5E2 /* Main.storyboard */,
-				115A810F2A3896DF00BDF5E2 /* Assets.xcassets */,
-				115A81112A3896DF00BDF5E2 /* LaunchScreen.storyboard */,
 				115A81142A3896DF00BDF5E2 /* Info.plist */,
 			);
 			path = AppleSongs;
@@ -175,6 +180,8 @@
 		115A81382A38976500BDF5E2 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				115A81112A3896DF00BDF5E2 /* LaunchScreen.storyboard */,
+				115A810F2A3896DF00BDF5E2 /* Assets.xcassets */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -216,6 +223,7 @@
 		115A81432A38986C00BDF5E2 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				115A816B2A38B85100BDF5E2 /* Network Configuration */,
 				115A814B2A3898C900BDF5E2 /* Extensions */,
 				115A81442A38987600BDF5E2 /* Theme */,
 			);
@@ -235,6 +243,7 @@
 		115A814B2A3898C900BDF5E2 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				115A81662A38AF5300BDF5E2 /* Data+Extentions */,
 				115A815C2A38A18200BDF5E2 /* String+Extentions */,
 			);
 			path = Extensions;
@@ -257,6 +266,7 @@
 		115A814E2A3898FB00BDF5E2 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				115A815F2A38ABE000BDF5E2 /* Endpoint */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -306,6 +316,7 @@
 		115A81562A38997F00BDF5E2 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				115A81702A3C551F00BDF5E2 /* SearchViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -313,6 +324,7 @@
 		115A81572A38998700BDF5E2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				115A810A2A3896DE00BDF5E2 /* SearchView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -323,6 +335,33 @@
 				115A815D2A38A19600BDF5E2 /* String+Extentions.swift */,
 			);
 			path = "String+Extentions";
+			sourceTree = "<group>";
+		};
+		115A815F2A38ABE000BDF5E2 /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				115A81602A38ABED00BDF5E2 /* Endpoint.swift */,
+				115A81622A38AE6200BDF5E2 /* API.swift */,
+				115A81642A38AF2500BDF5E2 /* Network.swift */,
+				115A81692A38AFAB00BDF5E2 /* ServiceProtocol.swift */,
+			);
+			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		115A81662A38AF5300BDF5E2 /* Data+Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				115A81672A38AF5F00BDF5E2 /* Data+Extentions.swift */,
+			);
+			path = "Data+Extentions";
+			sourceTree = "<group>";
+		};
+		115A816B2A38B85100BDF5E2 /* Network Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				115A816C2A38B86800BDF5E2 /* Configuration.plist */,
+			);
+			path = "Network Configuration";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -430,8 +469,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				115A81132A3896DF00BDF5E2 /* LaunchScreen.storyboard in Resources */,
+				115A816D2A38B86800BDF5E2 /* Configuration.plist in Resources */,
 				115A81102A3896DF00BDF5E2 /* Assets.xcassets in Resources */,
-				115A810E2A3896DE00BDF5E2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,17 +495,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				115A81612A38ABED00BDF5E2 /* Endpoint.swift in Sources */,
 				115A81422A38982600BDF5E2 /* NameSpaceing.swift in Sources */,
+				115A81652A38AF2500BDF5E2 /* Network.swift in Sources */,
 				115A81482A38988C00BDF5E2 /* Colors.swift in Sources */,
+				115A81712A3C551F00BDF5E2 /* SearchViewModel.swift in Sources */,
 				115A81592A389CF000BDF5E2 /* BaseModel.swift in Sources */,
+				115A81632A38AE6200BDF5E2 /* API.swift in Sources */,
 				115A813E2A3897F800BDF5E2 /* Application.swift in Sources */,
 				115A815E2A38A19600BDF5E2 /* String+Extentions.swift in Sources */,
-				115A810B2A3896DE00BDF5E2 /* ViewController.swift in Sources */,
+				115A810B2A3896DE00BDF5E2 /* SearchView.swift in Sources */,
+				115A81682A38AF5F00BDF5E2 /* Data+Extentions.swift in Sources */,
 				115A814A2A3898A800BDF5E2 /* Size.swift in Sources */,
 				115A815B2A389D9200BDF5E2 /* SongSearchModel.swift in Sources */,
 				115A81072A3896DE00BDF5E2 /* AppDelegate.swift in Sources */,
-				115A81092A3896DE00BDF5E2 /* SceneDelegate.swift in Sources */,
 				115A81532A38995F00BDF5E2 /* Repository.swift in Sources */,
+				115A816A2A38AFAB00BDF5E2 /* ServiceProtocol.swift in Sources */,
 				115A81402A38981100BDF5E2 /* AppAppearance.swift in Sources */,
 				115A81462A38987C00BDF5E2 /* Theme.swift in Sources */,
 			);
@@ -505,14 +549,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		115A810C2A3896DE00BDF5E2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				115A810D2A3896DE00BDF5E2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		115A81112A3896DF00BDF5E2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -643,13 +679,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AppleSongs/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Apple Songs";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -671,13 +709,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AppleSongs/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Apple Songs";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
