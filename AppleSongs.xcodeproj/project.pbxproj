@@ -31,6 +31,11 @@
 		115A816A2A38AFAB00BDF5E2 /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115A81692A38AFAB00BDF5E2 /* ServiceProtocol.swift */; };
 		115A816D2A38B86800BDF5E2 /* Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 115A816C2A38B86800BDF5E2 /* Configuration.plist */; };
 		115A81712A3C551F00BDF5E2 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115A81702A3C551F00BDF5E2 /* SearchViewModel.swift */; };
+		115A81742A3CC1F800BDF5E2 /* SearcViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115A81732A3CC1F800BDF5E2 /* SearcViewCell.swift */; };
+		115A81772A3CC25E00BDF5E2 /* UITableViewCell+Extetnions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115A81762A3CC25E00BDF5E2 /* UITableViewCell+Extetnions.swift */; };
+		115A817A2A3CC29D00BDF5E2 /* UITableViewCell+Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115A81792A3CC29D00BDF5E2 /* UITableViewCell+Base.swift */; };
+		115A817D2A3CE27E00BDF5E2 /* UIImageView+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115A817C2A3CE27E00BDF5E2 /* UIImageView+Extentions.swift */; };
+		115A81802A3CECBD00BDF5E2 /* Date+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115A817F2A3CECBD00BDF5E2 /* Date+Extentions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +84,11 @@
 		115A81692A38AFAB00BDF5E2 /* ServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
 		115A816C2A38B86800BDF5E2 /* Configuration.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Configuration.plist; sourceTree = "<group>"; };
 		115A81702A3C551F00BDF5E2 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		115A81732A3CC1F800BDF5E2 /* SearcViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearcViewCell.swift; sourceTree = "<group>"; };
+		115A81762A3CC25E00BDF5E2 /* UITableViewCell+Extetnions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extetnions.swift"; sourceTree = "<group>"; };
+		115A81792A3CC29D00BDF5E2 /* UITableViewCell+Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Base.swift"; sourceTree = "<group>"; };
+		115A817C2A3CE27E00BDF5E2 /* UIImageView+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extentions.swift"; sourceTree = "<group>"; };
+		115A817F2A3CECBD00BDF5E2 /* Date+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extentions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +225,7 @@
 		115A813C2A3897D600BDF5E2 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				115A81782A3CC28400BDF5E2 /* Flow */,
 				115A81512A38995200BDF5E2 /* Main */,
 			);
 			path = Application;
@@ -243,6 +254,9 @@
 		115A814B2A3898C900BDF5E2 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				115A817E2A3CECB100BDF5E2 /* Date+Extenions */,
+				115A817B2A3CE26600BDF5E2 /* UIImageView+Extentions */,
+				115A81752A3CC23E00BDF5E2 /* UITableViewCell+Extentions */,
 				115A81662A38AF5300BDF5E2 /* Data+Extentions */,
 				115A815C2A38A18200BDF5E2 /* String+Extentions */,
 			);
@@ -324,6 +338,7 @@
 		115A81572A38998700BDF5E2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				115A81722A3CC1E800BDF5E2 /* Cell */,
 				115A810A2A3896DE00BDF5E2 /* SearchView.swift */,
 			);
 			path = View;
@@ -362,6 +377,46 @@
 				115A816C2A38B86800BDF5E2 /* Configuration.plist */,
 			);
 			path = "Network Configuration";
+			sourceTree = "<group>";
+		};
+		115A81722A3CC1E800BDF5E2 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				115A81732A3CC1F800BDF5E2 /* SearcViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		115A81752A3CC23E00BDF5E2 /* UITableViewCell+Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				115A81762A3CC25E00BDF5E2 /* UITableViewCell+Extetnions.swift */,
+			);
+			path = "UITableViewCell+Extentions";
+			sourceTree = "<group>";
+		};
+		115A81782A3CC28400BDF5E2 /* Flow */ = {
+			isa = PBXGroup;
+			children = (
+				115A81792A3CC29D00BDF5E2 /* UITableViewCell+Base.swift */,
+			);
+			path = Flow;
+			sourceTree = "<group>";
+		};
+		115A817B2A3CE26600BDF5E2 /* UIImageView+Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				115A817C2A3CE27E00BDF5E2 /* UIImageView+Extentions.swift */,
+			);
+			path = "UIImageView+Extentions";
+			sourceTree = "<group>";
+		};
+		115A817E2A3CECB100BDF5E2 /* Date+Extenions */ = {
+			isa = PBXGroup;
+			children = (
+				115A817F2A3CECBD00BDF5E2 /* Date+Extentions.swift */,
+			);
+			path = "Date+Extenions";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -495,7 +550,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				115A81772A3CC25E00BDF5E2 /* UITableViewCell+Extetnions.swift in Sources */,
 				115A81612A38ABED00BDF5E2 /* Endpoint.swift in Sources */,
+				115A817D2A3CE27E00BDF5E2 /* UIImageView+Extentions.swift in Sources */,
 				115A81422A38982600BDF5E2 /* NameSpaceing.swift in Sources */,
 				115A81652A38AF2500BDF5E2 /* Network.swift in Sources */,
 				115A81482A38988C00BDF5E2 /* Colors.swift in Sources */,
@@ -503,6 +560,7 @@
 				115A81592A389CF000BDF5E2 /* BaseModel.swift in Sources */,
 				115A81632A38AE6200BDF5E2 /* API.swift in Sources */,
 				115A813E2A3897F800BDF5E2 /* Application.swift in Sources */,
+				115A81742A3CC1F800BDF5E2 /* SearcViewCell.swift in Sources */,
 				115A815E2A38A19600BDF5E2 /* String+Extentions.swift in Sources */,
 				115A810B2A3896DE00BDF5E2 /* SearchView.swift in Sources */,
 				115A81682A38AF5F00BDF5E2 /* Data+Extentions.swift in Sources */,
@@ -510,8 +568,10 @@
 				115A815B2A389D9200BDF5E2 /* SongSearchModel.swift in Sources */,
 				115A81072A3896DE00BDF5E2 /* AppDelegate.swift in Sources */,
 				115A81532A38995F00BDF5E2 /* Repository.swift in Sources */,
+				115A81802A3CECBD00BDF5E2 /* Date+Extentions.swift in Sources */,
 				115A816A2A38AFAB00BDF5E2 /* ServiceProtocol.swift in Sources */,
 				115A81402A38981100BDF5E2 /* AppAppearance.swift in Sources */,
+				115A817A2A3CC29D00BDF5E2 /* UITableViewCell+Base.swift in Sources */,
 				115A81462A38987C00BDF5E2 /* Theme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

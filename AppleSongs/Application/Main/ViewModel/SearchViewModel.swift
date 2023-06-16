@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 final class SearchViewModel {
-    let searchCompletion = PassthroughSubject<[Model.SearchModel], Never>()
+    let searchCompletion = PassthroughSubject<Model.BaseModel<Model.SearchModel>, Never>()
 
     var searchService: SearchServiceProtocol
     private var subscribers = Set<AnyCancellable>()
@@ -28,12 +28,11 @@ final class SearchViewModel {
                 case .finished:
                     print("Finished Search")
                 }
-            } receiveValue: { [weak self] completion in
+            } receiveValue: { [weak self] response in
                 guard let self = self else { return }
 
-                if let searchList = completion.results {
-                    self.searchCompletion.send(searchList)
-                }
+                
+                self.searchCompletion.send(response)
             }
             .store(in: &subscribers)
     }
