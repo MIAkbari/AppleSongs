@@ -71,7 +71,7 @@ extension TableViewCell {
             artWorkImageView.loadImageUsingCacheWithURLString(model.artworkUrl100 ?? "", placeHolder: nil)
             trackNameLabel.text = model.trackName
             artistNameLabel.text = model.artistName
-            relaseDateLabel.text = model.releaseDate?.toString()
+            relaseDateLabel.text = model.releaseDate?.convertToDate()
             descriptionLabel.text = model.longDescription?.maxLength(length: 150)
         }
         

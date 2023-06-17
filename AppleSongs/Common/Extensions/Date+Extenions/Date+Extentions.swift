@@ -8,14 +8,20 @@
 import Foundation
 
 extension String {
-
-    func toString() -> String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        formatter.locale = Locale(identifier: "en_US")
-        let yourDate: Date? = formatter.date(from: self)
-        formatter.dateFormat = "yyyy/MM/DD"
-        let convertDate = formatter.string(from: yourDate ?? .init())
-        return convertDate
+    
+    func convertToDate() -> String {
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        dateFormatter.locale = Locale(identifier: "en_US")
+        if let dt = dateFormatter.date(from: self) {
+            dateFormatter.dateFormat = "yyyy-MM-dd"
+            let formatedStringDate = dateFormatter.string(from: dt)
+            return formatedStringDate
+        }
+        
+        
+        return "01-01-70"
     }
+    
 }

@@ -29,6 +29,14 @@ extension ViewController {
             return res
         }()
         
+        private lazy var searchBar: UISearchBar = {
+            let res = UISearchBar(frame: .zero)
+            res.delegate = self
+            res.sizeToFit()
+            res.placeholder = "Search Songs"
+            return res
+        }()
+        
         // MARK: - Properties
         
         private var viewModel = SearchViewModel()
@@ -39,17 +47,18 @@ extension ViewController {
         deinit {
             debugPrint(#function, String(describing: Self.self))
         }
-
+        
         override func viewDidLoad() {
             super.viewDidLoad()
             
             setupBindings()
-            fetchSearch()
             setupViews()
         }
         
         private func setupViews() {
             view.backgroundColor = .systemBackground
+            
+            navigationItem.titleView = searchBar
             
             view.addSubview(tableView)
             
@@ -63,6 +72,8 @@ extension ViewController {
             
         }
         
+        
+        // Binding data combine from view model
         private func setupBindings() {
             viewModel.searchCompletion
                 .receive(on: RunLoop.main)
@@ -79,13 +90,15 @@ extension ViewController {
                     self.loadTableView()
                 })
                 .store(in: &subscribers)
-
+            
         }
         
-        private func fetchSearch() {
-            viewModel.fetchSearch(term: "Justin", limit: resultCount)
+        // fetch data response from text
+        private func fetchSearch(_ text: String) {
+            viewModel.fetchSearch(term: text, limit: resultCount)
         }
         
+        // load table view with DispatchQueue api
         private func loadTableView() {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
@@ -94,6 +107,7 @@ extension ViewController {
     }
 }
 
+// MARK: - UITableViewDelegate, UITableViewDataSource
 extension ViewController.Search: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -106,8 +120,24 @@ extension ViewController.Search: UITableViewDelegate, UITableViewDataSource {
         cell.fill(item)
         if indexPath.row == searchItems.count - 1 {
             self.resultCount += 20
-            self.fetchSearch()
+            self.fetchSearch(searchBar.text ?? "")
         }
         return cell
+    }
+}
+
+// MARK: - UISearchBarDelegate
+extension ViewController.Search: UISearchBarDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        // for delay debunce
+        NSObject.cancelPreviousPerformRequests(withTarget: self)
+        // for dealy from ns object
+        perform(#selector(updateRecord), with: self, afterDelay: 0.5)
+    }
+    
+    @objc func updateRecord() {
+        fetchSearch(searchBar.text ?? "")
     }
 }

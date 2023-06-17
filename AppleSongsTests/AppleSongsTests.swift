@@ -6,31 +6,69 @@
 //
 
 import XCTest
+import Combine
 @testable import AppleSongs
 
 final class AppleSongsTests: XCTestCase {
+    
+    var viewModel = SearchViewModel()
+    var subscribers: Set<AnyCancellable>!
+
+    // MARK: - Lifecycle
 
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        try super.setUpWithError()
+
+        subscribers = []
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
+        try super.tearDownWithError()
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+        subscribers.forEach { $0.cancel() }
     }
+    
+    // MARK: - Tests
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    // testSearchWithSucces
+    func testSearchWithSucces() throws {
+        var areInputsValid = false
+        let expectation = expectation(description: "Valid text from search")
+
+        viewModel.fetchSearch(term: "Justin", limit: 5)
+        
+        viewModel.searchCompletion
+            .receive(on: RunLoop.main)
+            .sink(receiveValue: { [weak self] response in
+                guard let self = self else { return }
+                
+                areInputsValid = true
+                expectation.fulfill()
+            })
+            .store(in: &subscribers)
+
+        waitForExpectations(timeout: 5.0, handler: nil)
+        XCTAssert(areInputsValid, "The search api has issue")
     }
+    
+    // testSearchWithFailer
+    func testSearchWithFailer() throws {
+        var areInputsValid = false
+        let expectation = expectation(description: "Not valida text for search")
 
+        viewModel.fetchSearch(term: "", limit: 0)
+        
+        viewModel.searchCompletion
+            .receive(on: RunLoop.main)
+            .sink(receiveValue: { [weak self] response in
+                guard let self = self else { return }
+                
+                areInputsValid = true
+                expectation.fulfill()
+            })
+            .store(in: &subscribers)
+
+        waitForExpectations(timeout: 5.0, handler: nil)
+        XCTAssert(areInputsValid, "The search api has issue")
+    }
 }
